@@ -21,9 +21,11 @@ Including another URLconf
 #     path('admin/', admin.site.urls),
 # ]
 # Django 1.11.9
+from django.conf.urls import include
 from django.conf.urls import url
 from django.contrib import admin
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'', include('blog.urls')),
 ]
